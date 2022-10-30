@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Question from "./question.js";
 import { questionSchema } from "./question.js";
 
 const attemptSchema = new mongoose.Schema({
@@ -25,6 +24,7 @@ const attemptSchema = new mongoose.Schema({
             default: 0
         }
     }],
+    correctAnswer: [questionSchema],
     scoreText: {
         type: String,
         required: false
