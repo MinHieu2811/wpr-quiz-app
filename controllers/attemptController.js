@@ -31,7 +31,6 @@ const createAttempt = asyncHandler(async (req, res) => {
 
 const updateAttempt = asyncHandler(async (req, res) => {
     const { id } = req.params
-    console.log(req.body.usersAnswer);
     const attempt = await Attempt.findById(id)
     let arrAnswer = []
 
